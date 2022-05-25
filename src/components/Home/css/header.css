@@ -63,6 +63,7 @@ display: none;
         border: 1px solid grey;
         pointer-events: none;
         mix-blend-mode: difference;
+        z-index: 100;
     }
     
     .cursor:hover~ h3{
