@@ -1,0 +1,26 @@
+.text{
+    position: absolute;
+    border-right: 4px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+.animation{
+    animation: typewriter 4s steps(15) 1s 1 normal both, blinkCursor 500ms steps(15) infinite normal;
+}
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to{
+        width: 200px;
+    }
+}
+@keyframes blinkCursor {
+    from{
+        border-right-color: white;
+    }
+    to{
+        border-right-color: transparent;
+    }
+}

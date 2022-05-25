@@ -1,0 +1,32 @@
+.wealth-hero{
+    position: relative;
+    background-image: url(../image/wealth.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.wealth-hero-holder{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.wealth-hero-holder h1{
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 0.5rem;
+}
+.wealth-hero-holder h1:hover {
+    transform: scale(1.2);
+    transition: 1s ease-in-out all;
+
+}
+@media only screen and (min-width: 992px) {
+    .wealth-hero-holder h1{
+        text-align: center;
+        font-size: 64px;
+    }
+}

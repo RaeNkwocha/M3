@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Loading from "./components/Loading/Loading";
+import Nav from "./components/Navigation/Nav";
 
 function App() {
+  const [cursorX, setCursorX] = useState();
+  const [cursorY, setCursorY] = useState();
+
+  window.addEventListener("mousemove", (e) => {
+    setCursorX(e.pageX);
+    setCursorY(e.pageY);
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav></Nav>
+      <div>
+        <Loading></Loading>
+        <div
+          className="cursor"
+          style={{ left: cursorX + "px", top: cursorY + "px" }}
+        ></div>
+      </div>
     </div>
   );
 }
